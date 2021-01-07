@@ -24,7 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: r-lib/actions/setup-pandoc@v1 # sets up pandoc
+      - uses: Ender-events/pandoc@master
         with:
-          pandoc-version: '2.7.3' # The pandoc version to download (if necessary) and use.
-      - run: pandoc -s --toc -V toc-title="Table of contents" -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" --include-before-body cover.tex source/introduction.md source/tp*.md -H chapter-break.tex -o build/output.pdf
+          args: '-s --toc -V toc-title="Table of contents" -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" --include-before-body cover.tex source/introduction.md source/tp*.md -H chapter-break.tex -o build/output.pdf'
