@@ -26,4 +26,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: Ender-events/pandoc@master
         with:
-          args: '-s --toc -V toc-title="Table of contents" -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" --include-before-body cover.tex source/introduction.md source/tp*.md -H chapter-break.tex -o build/output.pdf'
+          args: '-s --toc -V toc-title="Table of contents" -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" --include-before-body cover.tex source/introduction.md source/tp56-ntp56.md -H chapter-break.tex -o build/output.pdf'
